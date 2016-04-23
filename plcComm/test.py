@@ -12,6 +12,3 @@ print(resetRegisterHex[0])
 print(resetRegister[0])
 print(statusRegisterHex[0])
 print(statusRegister[0])
-
-print(setRegisterHex[1])
-print(setRegisterHex[15])
