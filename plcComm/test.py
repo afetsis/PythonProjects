@@ -14,3 +14,4 @@ print(statusRegisterHex[0])
 print(statusRegister[0])
 
 print(setRegisterHex[1])
+print(setRegisterHex[15])
