@@ -55,8 +55,5 @@ def parseResponse(response):
 	pass
 
 
-def setReg(setCommand):
-	serialTxRx(setCommand)
-
-def resetReg(resetCommand):
-	serialTxRx(resetCommand)
+def sendSerial(command):
+	serialTxRx(command)

@@ -1,14 +1,22 @@
-﻿#from registerCommands import setRegister
-#from registerCommands import resetRegister
-#from registerCommands import statusRegister
-#from serialTxRx import setReg
-#from serialTxRx import resetReg
-from registerCommands import *
+﻿from registerCommands import setRegister
+from registerCommands import resetRegister
+from registerCommands import statusRegister
+from serialTxRx import sendSerial
 
 
-print(setRegisterHex[0])
-print(setRegister[0])
-print(resetRegisterHex[0])
-print(resetRegister[0])
-print(statusRegisterHex[0])
-print(statusRegister[0])
+while True:
+    try:
+        cmdString = str(input('Give command: '))
+        regNum = int(input('Give output number: '))
+        if cmdString == 'set':
+            sendSerial(setRegister[regNum])
+        elif cmdString == 'reset':
+            sendSerial(resetRegister[regNum])
+        elif cmdString == 'status':
+            sendSerial(statusRegister[regNum])
+
+    except ValueError:
+        print('Wrong values')
+        break
+
+
